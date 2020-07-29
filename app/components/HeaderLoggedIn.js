@@ -29,7 +29,7 @@ const HeaderLoggedIn = () => {
   };
 
   return (
-    <div className="flex-row my-3 my-md-0">
+    <div className="flex-row my-3 my-md-0 flex-center">
       <a
         onClick={handleSearchIcon}
         data-tip="search"
@@ -48,23 +48,17 @@ const HeaderLoggedIn = () => {
         data-for="chat"
         data-tip="chat"
         className="mr-2 header-chat-icon"
+        style={{ marginTop: 4 }}
       >
         <i
           className="fas fa-comment"
           style={{
             color: chatIconColor,
-            fontSize: "1.35rem",
+            fontSize: "1.4rem",
           }}
         ></i>
         {state.unreadChatCount ? (
-          <span
-            className="chat-count-badge"
-            style={{
-              paddingLeft: "3px",
-              paddingBottom: "2px",
-              fontSize: "0.8rem",
-            }}
-          >
+          <span className="chat-count-badge">
             {state.unreadChatCount < 10 ? state.unreadChatCount : "9+"}
           </span>
         ) : (
